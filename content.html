@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Star Wars Ships</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+        <link rel="stylesheet" type="text/css" href="http://getskeleton.com/dist/css/skeleton.css">
+    </head>
+    <body>
+        <table id="myTable" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Manufacturer</th>
+                    <th>Cost in Credits</th>
+                    <th>Length</th>
+                    <th>Max Atmosphering Speed</th>
+                    <th>Crew</th>
+                    <th>Passengers</th>
+                    <th>Cargo Capacity</th>
+                    <th>Consumables</th>
+                    <th>Hyperdrive Class</th>
+                    <th>MGLT</th>
+                    <th>Starship Class</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {{#dataOutput}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{model}}</td>
+                    <td>{{manufacturer}}</td>
+                    <td>{{cost_in_credits}}</td>
+                    <td>{{length}}</td>
+                    <td>{{max_atmosphering_speed}}</td>
+                    <td>{{crew}}</td>
+                    <td>{{passengers}}</td>
+                    <td>{{cargo_capacity}}</td>
+                    <td>{{consumables}}</td>
+                    <td>{{hyperdrive_rating}}</td>
+                    <td>{{MGLT}}</td>
+                    <td>{{starship_class}}</td>
+                    
+                </tr>
+                {{/dataOutput}}
+            </tbody>
+        </table>
+        <script>
+            $(document).ready( function () {
+                $('#myTable').DataTable();
+            } );
+        </script>
+    </body>
+</html>
